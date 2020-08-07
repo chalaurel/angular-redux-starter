@@ -1,26 +1,23 @@
 
-<div class="wrapper" style="margin-left: 250px">
+  <div class="wrapper">
+    <button style="" routerLink="user"> User List </button>
+    <ng-container *ngIf="dataArray">
 
-    <pre>{{ dataArray$ | json}}</pre>
-
-</div>
-  <!-- <div class="wrapper">
-    <ng-container *ngIf="data$">
       <table>
         <tr>
           <td>first_name</td>
           <td>last_name</td>
           <td>e-mail</td>
         </tr>
-        <ng-container *ngFor="let d of data$">
+        <ng-container *ngFor="let d of dataArray.data">
           <tr>
-            <td>{{ d | json}}</td>
-            <td></td>
-            <td></td>
+            <td>{{ d.first_name}}</td>
+            <td>{{ d.last_name}}</td>
+            <td>{{ d.email}}</td>
           </tr>
         </ng-container>
       </table>
     </ng-container>
   </div>
- -->
+
 

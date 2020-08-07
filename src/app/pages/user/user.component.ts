@@ -22,17 +22,12 @@ export class userDataComponent implements OnInit {
     private user: userDataService,
   ) {
     this.store.dispatch(new getuserDataAction());
-    // console.log(this.store.dispatch(new getuserDataAction()));
   }
 
   ngOnInit(): void {
-    // this.users$ = O  bject.keys;
     this.users$ = this.store.pipe(select(userData));
     this.users$.subscribe(v => {
-    this.dataArray = Object.entries( v['userReducer']['userData']['data']);
-
-     console.log(v['userReducer']['userData'])
-    })
-    // console.log()
+    this.dataArray = v['userReducer']['userData'];
+    });
   }
 }
